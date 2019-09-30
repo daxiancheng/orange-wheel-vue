@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import Obutton from './components/Obutton.vue'
 import Oicon from './components/oicon.vue'
-
+import Obtngroup from './components/Obtngroup.vue'
+import chai from 'chai'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+Vue.component('o-button-group',Obtngroup)
 Vue.component('o-button',Obutton)
 Vue.component('o-icon',Oicon)
 new Vue({
@@ -17,3 +19,20 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+const expect = chai.expect
+
+{
+  const Constructor = Vue.extend(Obutton)
+  const vm  = new Constructor({
+    propsData:{
+      iconName:'setting'
+    }
+  })
+  vm.$mount()
+  let useElement = vm.$el.querySelector('use')
+  let href = useElement.getAttribute('xlink:href')
+  expect(href).to.eq('#icon-setting')
+  vm.$el.remove()
+  vm.$destroy()
+}

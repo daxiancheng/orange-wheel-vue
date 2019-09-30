@@ -1,5 +1,5 @@
 <template>
-  <div class="buttonBox">
+  
     <button class="btn" :class="iconPosition" @click="loadingShow">
       <o-icon icon="loading" v-if="isloading" class="loading"></o-icon>
       <o-icon :icon="iconName" v-if="iconName && !isloading"></o-icon>
@@ -7,7 +7,6 @@
         <slot></slot>
       </div>
     </button>
-  </div>
 </template>
 
 
@@ -47,12 +46,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.buttonBox {
-  font-size: 14px;
-  color: #333;
-  margin: 0 4px;
-}
+
 .btn {
+   font-size: 14px;
+  color: #333;
   background-color: #fff;
   border: 1px solid #999;
   padding: 0.5em 1em;
@@ -60,14 +57,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 }
 .btn:hover{
-  outline: none
+  border:1px solid orange;
 }
 .btn:active{
   background-color: #ccc;
   border:1px solid #999; 
 }
+
 .right>.icon{
   order: 2;
   margin-right: 0;
