@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <o-button iconName="setting" :loading="isloading" class="view">按钮</o-button>
+    <o-button iconName="setting" :loading="isloading" class="view" @click="isloading = !isloading">按钮</o-button>
+    <o-button iconName="setting" class="view" >按钮</o-button>
     <o-button iconName="setting" iconPosition="right" class="view">按钮</o-button>
     <o-button iconName="zan" iconPosition="right" class="view">按钮</o-button>
     <o-button-group class="view">
-      <o-button iconName="left">下一页</o-button>
+      <o-button iconName="left">上一页</o-button>
       <o-button>按钮</o-button>
-      <o-button iconName="right">上一页</o-button>
+      <o-button iconName="right" iconPosition="right">下一页</o-button>
     </o-button-group>
+    <o-page-button class="view"></o-page-button>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="button-group">
+    <div class="button-group" @click="$emit('click',$event)">
         <slot></slot>
     </div>
 </template>
@@ -27,5 +27,9 @@ export default {
     .button-group>.btn:last-child{
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
+    }
+    .button-group>.btn:hover{
+        position: relative;
+        z-index: 1;
     }
 </style>

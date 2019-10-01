@@ -1,8 +1,8 @@
 <template>
   
-    <button class="btn" :class="iconPosition" @click="loadingShow">
-      <o-icon icon="loading" v-if="isloading" class="loading"></o-icon>
-      <o-icon :icon="iconName" v-if="iconName && !isloading"></o-icon>
+    <button class="btn" :class="iconPosition" @click="$emit('click',$event)">
+      <o-icon icon="loading" v-if="loading" class="loading"></o-icon>
+      <o-icon :icon="iconName" v-if="iconName && !loading"></o-icon>
       <div class="btnValue">
         <slot></slot>
       </div>
@@ -26,19 +26,14 @@ export default {
   name: "Obutton",
   data(){
     return {
-      isloading:false
+     
     }
   },
  mounted(){
    console.log(typeof this.loading)
  },
  methods:{
-   loadingShow(){
-     if(this.loading){
-       this.isloading = !this.isloading
-     }
-     
-   }
+  
  }
 };
 </script>
@@ -48,7 +43,7 @@ export default {
 
 
 .btn {
-   font-size: 14px;
+  font-size: 14px;
   color: #333;
   background-color: #fff;
   border: 1px solid #999;
@@ -63,7 +58,7 @@ export default {
   border:1px solid orange;
 }
 .btn:active{
-  background-color: #ccc;
+  background-color: #eee;
   border:1px solid #999; 
 }
 
