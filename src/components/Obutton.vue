@@ -1,5 +1,4 @@
 <template>
-  
     <button class="btn" :class="iconPosition" @click="$emit('click',$event)">
       <o-icon icon="loading" v-if="loading" class="loading"></o-icon>
       <o-icon :icon="iconName" v-if="iconName && !loading"></o-icon>
@@ -58,7 +57,7 @@ export default {
   border:1px solid orange;
 }
 .btn:active{
-  background-color: #eee;
+  background-color: orange;
   border:1px solid #999; 
 }
 
