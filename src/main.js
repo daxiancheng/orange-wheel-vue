@@ -8,10 +8,12 @@ import Oicon from './components/oicon.vue'
 import Obtngroup from './components/Obtngroup.vue'
 import OpageButton from './components/OpageButton.vue'
 import Oinput from './components/Oinput.vue'
+import Orow from './components/Orol.vue'
 import chai from 'chai'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+Vue.component('o-row',Orow)
 Vue.component('o-input',Oinput)
 Vue.component('o-page-button',OpageButton)
 Vue.component('o-button-group',Obtngroup)

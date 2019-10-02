@@ -23,6 +23,9 @@
       <o-input v-model="value" messageType="error" class="view"></o-input>
        <o-input v-model="value" messageType="success" class="view"></o-input>
     </div>
+    <div>
+      <o-row></o-row>
+    </div>
   </div>
 </template>
 
