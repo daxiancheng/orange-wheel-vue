@@ -23,8 +23,29 @@
       <o-input v-model="value" messageType="error" class="view"></o-input>
        <o-input v-model="value" messageType="success" class="view"></o-input>
     </div>
-    <div>
-      <o-row></o-row>
+    <div class="gridvue">
+      <o-row class="rowmargin"> 
+        <o-col class="colbgcolor" v-for="list in 24" :key="list+1">{{list}}</o-col>
+      </o-row>
+      <o-row class="rowmargin" gutter="20">
+        <o-col class="colbgcolor">1</o-col>
+        <o-col class="colbgcolor">2</o-col>
+      </o-row>
+      <o-row class="rowmargin" gutter="20">
+        <o-col class="colbgcolor">1</o-col>
+        <o-col class="colbgcolor">2</o-col>
+        <o-col class="colbgcolor">3</o-col>
+      </o-row>
+      <o-row class="rowmargin">
+        <o-col class="colbgcolor">1</o-col>
+        <o-col class="colbgcolor">2</o-col>
+        <o-col class="colbgcolor">3</o-col>
+        <o-col class="colbgcolor">4</o-col>
+      </o-row>
+      <o-row class="rowmargin">
+        <o-col class="colbgcolor" col-span="2">2</o-col>
+        <o-col class="colbgcolor" col-span="22">22</o-col>
+      </o-row>
     </div>
   </div>
 </template>
@@ -63,5 +84,17 @@ export default {
 .inputvue{
   display: flex;
   margin: 30px 0 4px;
+}
+.gridvue{
+  margin: 30px 0 4px;
+  width: 60%;
+}
+.colbgcolor{
+  background-color: orange;
+  border: 1px solid #666;
+  height: 70px;
+}
+.rowmargin{
+  margin-bottom: 20px;
 }
 </style>
