@@ -1,5 +1,5 @@
 <template>
-    <div class="col" :class="[`col-span-${colSpan}`]" :style="{marginRight:gutter+'px'}">
+    <div class="col" :class="[`col-span-${colSpan}`,`phone-span-${phone}`]" :style="{marginRight:gutter+'px'}">
         <slot></slot>
     </div>
 </template>
@@ -7,7 +7,14 @@
 <script>
 export default {
     props:{
-        colSpan:{}
+        colSpan:{
+            type:String,
+            default:'0'
+        },
+        phone:{
+            type:String,
+            default:'0'
+        }
     },
     data(){
         return {
@@ -27,6 +34,13 @@ export default {
             &.col-span-#{$n} {
                 width: ($n/24) * 100%;
             }
+        }
+        @media (max-width: 768px) {
+            @for $n from 1 through 24{
+            &.phone-span-#{$n} {
+                width: ($n/24) * 100%;
+            }
+        }
         }
     }
 </style>
