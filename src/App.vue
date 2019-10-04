@@ -48,6 +48,29 @@
         <o-col class="colbgcolor color2" col-span="22" phone="4">22</o-col>
       </o-row>
     </div>
+    <div class="layout">
+      <o-container class="rowmargin">
+        <o-header class="color3" style="height:60px">header</o-header>
+        <o-main class="color4">main</o-main>
+        <o-footer class="color3" style="height:60px">footer</o-footer>
+      </o-container>
+      <o-container class="rowmargin">
+        <o-header class="color3" style="height:60px">header</o-header>
+        <o-container>
+          <o-asider class="color5" style="width:140px">aside</o-asider>
+          <o-main class="color4">main</o-main>
+        </o-container>
+        <o-footer class="color3" style="height:60px">footer</o-footer>
+      </o-container>
+      <o-container class="rowmargin">
+        <o-asider class="color5" style="width:140px">aside</o-asider>
+        <o-container>
+           <o-header class="color3" style="height:60px">header</o-header>
+          <o-main class="color4">main</o-main>
+          <o-footer class="color3" style="height:60px">footer</o-footer>
+        </o-container>   
+      </o-container>
+    </div>
   </div>
 </template>
 
@@ -81,7 +104,7 @@ export default {
   flex-wrap: wrap;
 }
 .view {
-  margin: 0 4px;
+  margin: 4px 4px;
 }
 .inputvue{
   display: flex;
@@ -92,17 +115,33 @@ export default {
   margin: 30px 0 4px;
   width: 60%;
   text-align: center;
-  color: #444;
+  color: #ffffff;
 }
 .colbgcolor{
   background-color: orange;
-
   height: 70px;
 }
 .rowmargin{
   margin-bottom: 20px;
 }
 .colbgcolor.color2{
-  background-color: rgba(255, 166, 0, 0.50);
+  background-color: rgba(255, 166, 0, 0.80);
+}
+.layout{
+ margin: 30px 0 4px;
+  width: 60%;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid orange;
+  height: 400px;
+}
+.color3{
+  background-color: orange;
+}
+.color4{
+  background-color: rgba(255, 166, 0, 0.80);
+}
+.color5{
+  background-color: rgba(255, 166, 0, 0.6);
 }
 </style>

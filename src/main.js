@@ -10,10 +10,20 @@ import OpageButton from './components/OpageButton.vue'
 import Oinput from './components/Oinput.vue'
 import Orow from './components/Orow.vue'
 import Ocol from './components/Ocol.vue'
+import Ocontainer from './components/Ocontainer.vue'
+import Oheader from './components/Oheader.vue'
+import Omain from './components/Omain.vue'
+import Oasider from './components/Oasider.vue'
+import Ofooter from './components/Ofooter.vue'
 import chai from 'chai'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+Vue.component('o-footer',Ofooter)
+Vue.component('o-asider',Oasider)
+Vue.component('o-main',Omain)
+Vue.component('o-header',Oheader)
+Vue.component('o-container',Ocontainer)
 Vue.component('o-col',Ocol)
 Vue.component('o-row',Orow)
 Vue.component('o-input',Oinput)
