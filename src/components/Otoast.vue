@@ -1,34 +1,56 @@
 <template>
-    <div class="toast center">
+    <div class="toast" :class="position">
         <div class="message">
             <slot></slot>
         </div>
-        <span @click="clickclose">关闭</span>
+        <span @click="clickclose" v-if="handclose">关闭</span>
     </div>
 </template>
 
 <script>
 export default {
     name:'Otoast',
-    props:{},
+    props:{
+        position:{
+            type:String,
+            default:'top'
+        },
+        handclose:{
+            type:Boolean,
+            default:false
+        },
+        autoclose:{
+            type:Boolean,
+            default:true
+        },
+        autotime:{
+            type:Number,
+            default:2000
+        }
+    },
     methods:{
         close(){
             this.$el.remove()
             this.$emit('close')
             this.$destroy()
         },
-        autoclose(){
-            setTimeout(()=>{
+        eautoclose(){
+            if(this.autoclose){
+                setTimeout(()=>{
                 this.close()
-            },2000)
+            },this.autotime)
+            }
+            
         },
         clickclose(){
-            this.close()
-
+            if(this.handclose){
+                this.close()
+            }
         }
     },
     mounted(){
-        // this.autoclose()
+        this.eautoclose()
+        console.log(this.position)
     }
 }
 </script>
