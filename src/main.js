@@ -15,6 +15,8 @@ import Oheader from './components/Oheader.vue'
 import Omain from './components/Omain.vue'
 import Oasider from './components/Oasider.vue'
 import Ofooter from './components/Ofooter.vue'
+import Oplug from './components/Oplug.js'
+Vue.use(Oplug)
 import chai from 'chai'
 Vue.config.productionTip = false
 

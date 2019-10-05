@@ -49,12 +49,12 @@
       </o-row>
     </div>
     <div class="layout">
-      <o-container class="rowmargin">
+      <o-container class="rowmargin" style="height:400px">
         <o-header class="color3" style="height:60px">header</o-header>
         <o-main class="color4">main</o-main>
         <o-footer class="color3" style="height:60px">footer</o-footer>
       </o-container>
-      <o-container class="rowmargin">
+      <o-container class="rowmargin" style="height:400px">
         <o-header class="color3" style="height:60px">header</o-header>
         <o-container>
           <o-asider class="color5" style="width:140px">aside</o-asider>
@@ -62,7 +62,7 @@
         </o-container>
         <o-footer class="color3" style="height:60px">footer</o-footer>
       </o-container>
-      <o-container class="rowmargin">
+      <o-container class="rowmargin" style="height:400px">
         <o-asider class="color5" style="width:140px">aside</o-asider>
         <o-container>
            <o-header class="color3" style="height:60px">header</o-header>
@@ -71,6 +71,10 @@
         </o-container>   
       </o-container>
     </div>
+    <div style="margin:30px 0">
+    <o-button @click="toast">按钮</o-button>
+    </div>
+
   </div>
 </template>
 
@@ -82,6 +86,13 @@ export default {
       isloading: true,
       value:'橙子'
     };
+  },
+  methods:{
+    toast(){
+      this.$Otoast(
+      '我是toast组件我是toast组件我是toast组件我是toast组件我是toast组件我是toast组件我是toast组件我是toast组件我是toast组件我是toast'
+      )
+    }
   }
 };
 </script>
@@ -132,8 +143,6 @@ export default {
   width: 60%;
   text-align: center;
   color: #ffffff;
-  border: 1px solid orange;
-  height: 400px;
 }
 .color3{
   background-color: orange;
