@@ -16,11 +16,21 @@ import Omain from './components/Omain.vue'
 import Oasider from './components/Oasider.vue'
 import Ofooter from './components/Ofooter.vue'
 import Oplug from './components/Oplug.js'
+import Otab from './components/Otab.vue'
+import Otabhead from './components/Otabhead.vue'
+import Otabitem from './components/Otabitem.vue'
+import Otabbody from './components/Otabbody.vue'
+import Otabcontent from './components/Otabcontent.vue'
 Vue.use(Oplug)
 import chai from 'chai'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+Vue.component('o-tabitem',Otabitem)
+Vue.component('o-tabbody',Otabbody)
+Vue.component('o-tabcontent',Otabcontent)
+Vue.component('o-tabhead',Otabhead)
+Vue.component('o-tab',Otab)
 Vue.component('o-footer',Ofooter)
 Vue.component('o-asider',Oasider)
 Vue.component('o-main',Omain)

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name:'o-container',
+    name:'Ocontainer',
     data(){
         return {
              issider:false,

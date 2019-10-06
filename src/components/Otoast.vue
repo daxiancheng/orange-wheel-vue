@@ -50,7 +50,6 @@ export default {
     },
     mounted(){
         this.eautoclose()
-        console.log(this.position)
     }
 }
 </script>

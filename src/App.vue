@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="buttonvue">
+    <!-- <div class="buttonvue">
       <o-button
         iconName="setting"
         :loading="isloading"
@@ -75,6 +75,20 @@
     <o-button @click="toast" class="view">按钮top</o-button>
     <o-button @click="toast1" class="view">按钮center</o-button>
     <o-button @click="toast2" class="view">按钮bottom</o-button>
+    </div> -->
+    <div>
+      <o-tab :selected.sync="selected">
+        <o-tabhead>
+          <o-tabitem name="festival">国庆</o-tabitem>
+          <o-tabitem name="sport">体育</o-tabitem>
+          <o-tabitem name="culture">人文</o-tabitem>
+        </o-tabhead>
+        <o-tabbody>
+          <o-tabcontent name="festival">国庆 相关信息</o-tabcontent>
+          <o-tabcontent name="sport">体育 相关信息</o-tabcontent>
+          <o-tabcontent name="culture">人文 相关信息</o-tabcontent>
+        </o-tabbody>
+      </o-tab>
     </div>
   </div>
 </template>
@@ -85,7 +99,8 @@ export default {
   data() {
     return {
       isloading: true,
-      value:'橙子'
+      value:'橙子',
+      selected:'festival'
     };
   },
   methods:{

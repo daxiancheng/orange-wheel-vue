@@ -22,18 +22,7 @@ export default {
       default:false
     }
   },
-  name: "Obutton",
-  data(){
-    return {
-     
-    }
-  },
- mounted(){
-   console.log(typeof this.loading)
- },
- methods:{
-  
- }
+  name: "Obutton"
 };
 </script>
 

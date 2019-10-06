@@ -5,10 +5,7 @@
 </template>
 <script>
 export default {
-    props:['icon'],
-    mounted(){
-        console.log(111)
-    }
+    props:['icon']
 };
 </script>
 
