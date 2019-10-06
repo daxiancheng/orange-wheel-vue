@@ -12,11 +12,12 @@ export default {
     mounted(){
         this.eventBus.$on('update:selected',(item,vm)=>{         
             if(vm){
-                let {width,height,left,right} = vm.$el.getBoundingClientRect()
+                let width = vm.$el.offsetWidth
+                let left = vm.$el.offsetLeft
                 this.$refs.line.style.width = width + 'px'
                 this.$refs.line.style.left = left + 'px'
                 console.log(vm.$el)
-                console.log(width,height,left,right)
+                console.log(width,left)
             }
         })
     }
@@ -27,10 +28,10 @@ export default {
     .Otab{
         display: flex;
         position: relative;
-        border-bottom: 1px solid #666;
+        border-bottom: 1px solid #999;
         .line{
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             border-bottom: 2px solid orange;
             transition: all 200;
         }
