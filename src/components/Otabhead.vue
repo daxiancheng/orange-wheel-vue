@@ -16,8 +16,6 @@ export default {
                 let left = vm.$el.offsetLeft
                 this.$refs.line.style.width = width + 'px'
                 this.$refs.line.style.left = left + 'px'
-                console.log(vm.$el)
-                console.log(width,left)
             }
         })
     }

@@ -21,11 +21,13 @@ import Otabhead from './components/Otabhead.vue'
 import Otabitem from './components/Otabitem.vue'
 import Otabbody from './components/Otabbody.vue'
 import Otabcontent from './components/Otabcontent.vue'
+import Opopover from './components/Opopover.vue'
 Vue.use(Oplug)
 import chai from 'chai'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+Vue.component('o-popover',Opopover)
 Vue.component('o-tabitem',Otabitem)
 Vue.component('o-tabbody',Otabbody)
 Vue.component('o-tabcontent',Otabcontent)

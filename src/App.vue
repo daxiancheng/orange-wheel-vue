@@ -76,7 +76,7 @@
     <o-button @click="toast1" class="view">按钮center</o-button>
     <o-button @click="toast2" class="view">按钮bottom</o-button>
     </div> -->
-    <div>
+    <!-- <div>
       <o-tab :selected.sync="selected">
         <o-tabhead>
           <o-tabitem name="festival">国庆</o-tabitem>
@@ -89,6 +89,16 @@
           <o-tabcontent name="culture">人文 相关信息</o-tabcontent>
         </o-tabbody>
       </o-tab>
+    </div> -->
+    <div style="margin-top:120px">
+      <o-popover position="top">
+        <o-button>按钮</o-button>
+        <template v-slot:content>
+          <div>
+            我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容
+          </div>
+        </template>
+      </o-popover>
     </div>
   </div>
 </template>
