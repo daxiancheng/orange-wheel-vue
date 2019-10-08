@@ -91,7 +91,7 @@
       </o-tab>
     </div> -->
     <div style="margin-top:140px;display:flex;margin-right:10px;">
-      <o-popover position="top" style="margin-right:10px;">
+      <o-popover position="top" style="margin-right:10px;" trigger="hover">
         <o-button>按钮clicktop</o-button>
         <template v-slot:content>
           <div>

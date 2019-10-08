@@ -1,6 +1,6 @@
 <template>
   <div class="popover" ref="popover">
-    <div class="button-wrapper" @click="showpopover" ref="button">
+    <div class="button-wrapper" ref="button">
       <slot></slot>
     </div>
     <div class="content-wrapper" v-if="isshowpopover" ref="content" :class="{[position]:true}">
@@ -15,9 +15,14 @@ export default {
   props:{
       position:{
           type:String,
+          default:'top',
           validator:function(value){
               return ['top','bottom','left','right'].indexOf(value) !==-1
           }
+      },
+      trigger:{
+          type:String,
+          default:'click'
       }
   },
   data() {
@@ -35,7 +40,6 @@ export default {
                     this.sefposition()
                     document.addEventListener('click',this.onclickdocument)
                 })
-                
             }else{
                 this.isshowpopover = false
             }
@@ -75,7 +79,26 @@ export default {
     }
   },
   mounted(){
-      
+      if(this.trigger === 'click'){
+          this.$refs.button.addEventListener('click',this.showpopover)
+      }else{
+          this.$refs.button.addEventListener('mouseenter',(e)=>{
+              if(this.$refs.button.contains(e.target)){
+                  this.isshowpopover = true
+                console.log('進去')
+                this.$nextTick(()=>{
+                    this.sefposition()
+                })
+              }
+          })
+          this.$refs.button.addEventListener('mouseleave',(e)=>{
+               if(this.$refs.popover.contains(e.target)){
+                   console.log('離開')
+                 this.isshowpopover = false
+               }
+                
+          })
+      }
   }
 };
 </script>
