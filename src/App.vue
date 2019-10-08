@@ -90,9 +90,33 @@
         </o-tabbody>
       </o-tab>
     </div> -->
-    <div style="margin-top:120px">
-      <o-popover position="top">
-        <o-button>按钮</o-button>
+    <div style="margin-top:140px;display:flex;margin-right:10px;">
+      <o-popover position="top" style="margin-right:10px;">
+        <o-button>按钮clicktop</o-button>
+        <template v-slot:content>
+          <div>
+            我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容
+          </div>
+        </template>
+      </o-popover>
+      <o-popover position="bottom" style="margin-right:10px;">
+        <o-button>按钮clickbottom</o-button>
+        <template v-slot:content>
+          <div>
+            我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容
+          </div>
+        </template>
+      </o-popover>
+      <o-popover position="left" style="margin-right:10px;">
+        <o-button>按钮clickleft</o-button>
+        <template v-slot:content>
+          <div>
+            我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容
+          </div>
+        </template>
+      </o-popover>
+      <o-popover position="right" style="margin-right:10px;">
+        <o-button>按钮clickright</o-button>
         <template v-slot:content>
           <div>
             我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容
