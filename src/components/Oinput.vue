@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import icon from './oicon.vue'
 export default {
     props:{
         value:{},
@@ -29,6 +30,9 @@ export default {
             type:Boolean,
             default:false
         }
+    },
+    components:{
+        'o-icon':icon
     },
     data(){
         return {

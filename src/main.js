@@ -24,7 +24,7 @@ import Otabcontent from './components/Otabcontent.vue'
 import Opopover from './components/Opopover.vue'
 import Ocollapse from './components/Ocollapse.vue'
 import Ocollapseitem from './components/Ocollapseitem.vue'
-Vue.use(Oplug)
+Vue.use(Oplug) 
 import chai from 'chai'
 Vue.config.productionTip = false
 

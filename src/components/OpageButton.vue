@@ -1,17 +1,22 @@
 <template>
-   <o-button-group @click="pagebtn">
+   <o-button-group @click="pagebtn" class="hahah">
       <o-button>«</o-button>
-     <o-button iconName="left" iconPosition="left">上一页</o-button>
+      <o-button iconName="left" iconPosition="left">上一页</o-button>
       <o-button v-show="btns[0]!==1">...</o-button><o-button v-for="btn in btns" :class="{active:btn === currentBtn}" :key="btn+'1'">{{btn}}</o-button><o-button v-show="btns[4]!==maxPage">...</o-button>
       <o-button iconName="right" iconPosition="right">下一页</o-button>
       <o-button>»</o-button>
-    
   </o-button-group>
 </template>
 
 <script>
+import button from './Obutton.vue'
+import buttongroup from './Obtngroup.vue'
 export default {
     name:'pagesbtn',
+    components:{
+      'o-button':button,
+      'o-button-group':buttongroup
+    },
     data(){
         return {
              btns:[1,2,3,4,5],
@@ -34,9 +39,10 @@ export default {
                 }
             }else{
               if(e.target.innerText==='下一页'){
-                 document.querySelector('.active').nextSibling.click()
+                 document.querySelector('.hahah .active').nextSibling.click()
+                 
               }else if(e.target.innerText==='上一页'){
-                  document.querySelector('.active').previousSibling.click()
+                  document.querySelector('.hahah .active').previousSibling.click()
               }else if(e.target.innerText==='«'){
                 this.currentBtn = 1
                 this.btns=[1,2,3,4,5]

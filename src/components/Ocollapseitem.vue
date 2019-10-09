@@ -50,11 +50,9 @@ export default {
 <style scoped lang="scss">
     .colltitle{
         padding: 0.5em 1em;
-        border: 1px solid red;
     }
     .collcontent{
         padding: 0.5em 1em;
-        border: 1px solid red;
         text-align: justify;
     }
 </style>

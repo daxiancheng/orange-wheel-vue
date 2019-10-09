@@ -44,5 +44,8 @@ export default {
             color: orange;
             font-weight: bold;
         }
+        &:hover{
+            cursor:pointer;
+        }
     }
 </style>

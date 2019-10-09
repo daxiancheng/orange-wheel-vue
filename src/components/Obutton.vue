@@ -10,6 +10,7 @@
 
 
 <script>
+import Oicon from './oicon.vue'
 export default {
   props: {
     iconName: {},
@@ -22,7 +23,10 @@ export default {
       default:false
     }
   },
-  name: "Obutton"
+  name: "Obutton",
+  components:{
+    'o-icon':Oicon
+  }
 };
 </script>
 

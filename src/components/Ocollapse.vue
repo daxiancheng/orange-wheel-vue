@@ -53,12 +53,12 @@ export default {
     .ocollapse{
         display: flex;
         flex-direction: column;
-        max-width: 600px;
-        &:first-child{
+        max-width: 80%;
+        .collapseitem:first-child{
             border-top: 1px solid #999;
             border-bottom: 1px solid #999;
         }
-        &:not(:first-child){
+        .collapseitem:not(:first-child){
             border-bottom: 1px solid #999;
         }
     }
