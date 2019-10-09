@@ -4,8 +4,9 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: '主页', link: '/' },
-            { text: '文档', link: '/' },
             { text: '交流', link: '/' },
+            { text: '源码', link: 'https://github.com/daxiancheng/orange-wheel-vue' },
+            
         ],
         sidebar: [
             {
