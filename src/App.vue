@@ -90,7 +90,7 @@
         </o-tabbody>
       </o-tab>
     </div> -->
-    <div style="margin-top:140px;display:flex;margin-right:10px;">
+    <div style="margin-top:140px;display:flex;">
       <o-popover position="top" style="margin-right:10px;" trigger="hover">
         <o-button>按钮clicktop</o-button>
         <template v-slot:content>
@@ -124,6 +124,13 @@
         </template>
       </o-popover>
     </div>
+    <div style="margin-top:40px;">
+      <o-collapse :openshow.sync="openshow" single>
+        <o-collapse-item title="标题一" name="1">我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容</o-collapse-item>
+        <o-collapse-item title="标题二" name="2">我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容</o-collapse-item>
+        <o-collapse-item title="标题三" name="3">我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容我是卡片的内容</o-collapse-item>
+      </o-collapse>
+    </div>
   </div>
 </template>
 
@@ -134,7 +141,8 @@ export default {
     return {
       isloading: true,
       value:'橙子',
-      selected:'festival'
+      selected:'festival',
+      openshow:['1']
     };
   },
   methods:{

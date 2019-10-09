@@ -22,11 +22,15 @@ import Otabitem from './components/Otabitem.vue'
 import Otabbody from './components/Otabbody.vue'
 import Otabcontent from './components/Otabcontent.vue'
 import Opopover from './components/Opopover.vue'
+import Ocollapse from './components/Ocollapse.vue'
+import Ocollapseitem from './components/Ocollapseitem.vue'
 Vue.use(Oplug)
 import chai from 'chai'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+Vue.component('o-collapse-item',Ocollapseitem)
+Vue.component('o-collapse',Ocollapse)
 Vue.component('o-popover',Opopover)
 Vue.component('o-tabitem',Otabitem)
 Vue.component('o-tabbody',Otabbody)
