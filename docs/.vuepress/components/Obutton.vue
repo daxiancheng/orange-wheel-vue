@@ -31,6 +31,13 @@ export default {
         'o-icon':icon,
         'o-button-group':Obtngroup,
         'o-page-button':OpageButton
+    },
+    mounted(){
+      let a
+      import('../../../src/components/Obutton.vue').then((e)=>{
+        a = e
+      })
+      console.log(a)
     }
 }
 </script>

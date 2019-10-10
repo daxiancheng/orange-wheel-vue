@@ -1,10 +1,11 @@
 module.exports = {
+    base:'/orange-wheel-vue/',
     title: 'Orange UI',
     description: '简单、易用',
     themeConfig: {
         nav: [
             { text: '主页', link: '/' },
-            { text: '交流', link: '/' },
+            { text: '交流', link: '/xxx' },
             { text: '源码', link: 'https://github.com/daxiancheng/orange-wheel-vue' },
             
         ],
