@@ -1,4 +1,5 @@
 module.exports = {
+    base:'orange-wheel-vue',
     title: 'Orange UI',
     description: '简单、易用',
     themeConfig: {
